@@ -1,0 +1,17 @@
+<div class="container">
+    <header>
+        <button type="button">CLICK</button>
+    </header>
+
+    <nav class="cards">
+        <app-card *ngFor="let data of datas" [data]="data" (click)="onSelectData(data)"></app-card>
+    </nav>
+
+    <main>
+        <app-card-detail [data]="selectedData"></app-card-detail>
+    </main>
+
+    <footer>
+        <button type="button">CLICK</button>
+    </footer>
+</div>

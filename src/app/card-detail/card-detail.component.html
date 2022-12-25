@@ -1,0 +1,7 @@
+<div *ngIf="data">
+    <h2>{{data.name | uppercase}} Details</h2>
+    <div>
+        <p>Total expenses: R${{totalExpenses}}</p>
+        <app-expense *ngFor="let expense of data.expenses" [expense]="expense"></app-expense>
+    </div>
+</div>

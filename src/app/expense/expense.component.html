@@ -1,0 +1,19 @@
+<div *ngIf="expense" class="expense" (click)="onSelectExpense()">
+    <div class="upper-text">
+        <h4 *ngIf="expense.label">{{expense.label.name}}</h4>
+    </div>
+
+    <div class="middle-text">
+        <h4>{{expense.name}}</h4>
+        <h4>R$ {{valueThisMonth}}</h4>
+    </div>
+
+    <div class="bottom-text">
+        <span>{{expense.date | date: 'd/M'}}</span>
+        <span *ngIf="expense.installments">Parcela {{currentInstallment}} de {{expense.installments}}</span>
+    </div>
+
+    <div *ngIf="isExpenseSelected">
+        <app-expense-detail [expense]="expense"></app-expense-detail>
+    </div>
+</div>

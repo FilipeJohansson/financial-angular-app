@@ -1,0 +1,43 @@
+.container {
+    height: 100vh;
+
+    display: grid;
+    grid-template:
+        "header header" auto
+        "aside  main" 1fr
+        "footer footer" auto /
+        auto 1fr;
+    /* grid-template-columns: minmax(17rem, 30%) 1fr; */
+    column-gap: 2rem;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: aside;
+    overflow-y: scroll;
+    padding: 1rem 1.5rem 0;
+}
+
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    grid-area: main;
+    overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+    grid-area: footer;
+    overflow-x: scroll;
+
+    display: flex;
+    flex-direction: row;
+}

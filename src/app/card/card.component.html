@@ -1,0 +1,21 @@
+<div *ngIf="data" class="credit-card" [style.background-color]="data.color">
+    <div class="upper-text">
+        <h2>{{data.name}}</h2>
+        <h2 *ngIf="data.card">{{data.card.number}}</h2>
+    </div>
+
+    <div *ngIf="data.card" class="middle-text">
+        <img src="assets/images/chip.png" alt="" />
+    </div>
+
+    <div class="bottom-text">
+        <div class="credit">
+            <p>
+                <span>R${{totalExpenses}}</span>
+                <span *ngIf="data.card">R${{data.card.maxCredit}}</span>
+            </p>
+            <progress *ngIf="data.card" class="progress-bar" [value]="totalExpenses"
+                max="{{data.card.maxCredit}}"></progress>
+        </div>
+    </div>
+</div>

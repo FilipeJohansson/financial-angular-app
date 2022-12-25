@@ -1,0 +1,36 @@
+.expense {
+    width: 17rem;
+    /* height: 10rem; */
+    /* padding: 1.5rem 2rem; */
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-text h4 {
+    margin: 0;
+    font-size: .8rem;
+}
+
+.middle-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle-text h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+.bottom-text span {
+    margin: 0;
+}
